@@ -1,0 +1,8 @@
+body {
+    scroll-behavior: smooth;
+    background-color: blue;
+}
+
+section {
+    padding-top: 80px;
+}
