@@ -2,6 +2,14 @@ body {
     scroll-behavior: smooth;
     background-color: #caf0f8;
     font-family: 'Poppins', sans-serif;
+    padding-top: 70px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 footer {
@@ -38,6 +46,20 @@ footer {
     font-size: 5rem;
 }
 
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+        /* Tablet */
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 2rem;
+        /* Mobile */
+    }
+}
+
 .card-width {
     width: auto;
 }
@@ -53,6 +75,7 @@ footer {
 section {
     padding-top: 5rem;
     padding-bottom: 5rem;
+    scroll-margin-top: 70px;
 }
 
 #btn-top {
@@ -70,6 +93,31 @@ section {
     text-align: center;
     transition: opacity 0.3s ease;
 }
+
+.nav-link {
+    padding: 0.5rem 1rem;
+}
+
+
+@media (max-width: 768px) {
+    .vh-100 {
+        height: auto !important;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+}
+
+
 
 /*
 #caf0f8
