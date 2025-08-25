@@ -4,24 +4,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Clase 16</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-  <div style="margin: 1rem;">
-    <h1>Ejercicio 01 - Tabla de multiplicar</h1>
-    <ul>
-      <li>Pide al usuario un número</li>
-      <li>Muestra la tabla de multiplicar de ese número del 1 al 10 usando un ciclo</li>
-    </ul>
-    <form id="ejercicio01">
-      <label for="numero">Ingresa un numero: </label>
-      <input type="number" id="numero" min="1" required />
-      <button type="submit">Enviar</button>
-    </form>
-    <br>
-    <div id="resultado01"></div>
+  <div class="row" style="margin: 1rem;">
+    <div class="col-6 col-md-6">
+      <h1>Ejercicio 01 - Tabla de multiplicar</h1>
+      <ul>
+        <li>Pide al usuario un número</li>
+        <li>Muestra la tabla de multiplicar de ese número del 1 al 10 usando un ciclo</li>
+      </ul>
+      <form id="ejercicio01">
+        <div class="mb-3">
+          <label for="numero">Ingresa un numero: </label>
+          <input type="number" id="numero" min="1" required />
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <div class="col-6 col-md-6">
+      <div id="resultado01"></div>
+    </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
   <script src="./index.js"></script>
 </body>
 

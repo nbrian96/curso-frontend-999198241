@@ -4,7 +4,7 @@ ejercicio01.addEventListener('submit', function (e) {
   e.preventDefault();
 
   const numero = parseInt(ejercicio01.querySelector('#numero').value, 10);
-  let resultado = "TABLA DE MULTIPLICAR " + numero + "<br>";
+  let resultado = `<h5>TABLA DE MULTIPLICAR ${numero}</h5>`;
 
   for (let i = 1; i < 11; i++) {
     const multi = numero * i;
