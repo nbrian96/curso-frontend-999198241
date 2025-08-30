@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clase 18 - Practico</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <main>
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#ejercicio02">Lista de Tareas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="ejercicio02" class="m-4">
+            <h3 class="display-4 fw-bold">Lista de Tareas (To-Do List)</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <form id="formEjercicio02">
+                        <div class="mb-3 mt-3">
+                            <input type="text" class="form-control" id="tarea" placeholder="Agregar tarea" name="tarea">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </section>
+
+        <section id="ejercicio03" class="m-4 mt-5">
+            <h3 class="display-4 fw-bold">Validación de Formulario</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <form id="formEjercicio03" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Ingresa nombre"
+                                required minlength="3">
+                            <div class="invalid-feedback">El nombre debe tener al menos 3 caracteres.</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa email"
+                                required>
+                            <div class="invalid-feedback">Por favor ingresa un email válido.</div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-3">
+                            <label for="pwd" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="pwd" name="pswd"
+                                placeholder="Ingresa contraseña" required>
+                            <div class="invalid-feedback">
+                                La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula y un
+                                número.
+                            </div>
+                        </div>
+
+                        <!-- Confirmar Password -->
+                        <div class="mb-3">
+                            <label for="confirmPwd" class="form-label">Confirmar Contraseña:</label>
+                            <input type="password" class="form-control" id="confirmPwd" name="confirmPwd"
+                                placeholder="Repite la contraseña" required>
+                            <div class="invalid-feedback">Las contraseñas no coinciden.</div>
+                        </div>
+
+                        <!-- Botón -->
+                        <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Enviar</button>
+                    </form>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ejercicio03.js"></script>
+</body>
+
+</html>

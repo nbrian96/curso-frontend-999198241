@@ -1,0 +1,10 @@
+body {
+    scroll-behavior: smooth;
+    background-color: #caf0f8;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px;
+}
+
+#navbar {
+    background-color: #020336;
+}
