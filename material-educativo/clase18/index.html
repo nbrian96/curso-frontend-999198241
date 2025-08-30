@@ -15,19 +15,33 @@
 <body>
     <main>
         <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
-            <div class="container">
+            <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navContent">
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#ejercicio01">Contador Interactivo</a></li>
                         <li class="nav-item"><a class="nav-link" href="#ejercicio02">Lista de Tareas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ejercicio03">Validacion de formulario</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <section id="ejercicio02" class="m-4">
+        <section id="ejercicio01" class="border-bottom border-primary p-4">
+            <h3 class="display-4 fw-bold">Contador Interactivo</h3>
+            <div class="container mt-3 d-flex flex-column align-items-center">
+                <h5 id="contadorEj01" class="mb-3">Número actual: 0</h5>
+                <div class="d-flex gap-2">
+                    <button id="bajarContador" type="button" class="btn btn-danger">Decrementar</button>
+                    <button id="resetContador" type="button" class="btn btn-dark">Reiniciar</button>
+                    <button id="subirContador" type="button" class="btn btn-success">Incremetar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="ejercicio02" class="border-bottom border-primary p-4">
             <h3 class="display-4 fw-bold">Lista de Tareas (To-Do List)</h3>
             <div class="row">
                 <div class="col-md-4">
@@ -42,7 +56,7 @@
             </div>
         </section>
 
-        <section id="ejercicio03" class="m-4 mt-5">
+        <section id="ejercicio03" class="border-bottom border-primary p-4">
             <h3 class="display-4 fw-bold">Validación de Formulario</h3>
             <div class="row">
                 <div class="col-md-4">
@@ -54,7 +68,6 @@
                             <div class="invalid-feedback">El nombre debe tener al menos 3 caracteres.</div>
                         </div>
 
-                        <!-- Email -->
                         <div class="mb-3">
                             <label for="email" class="form-label">Email:</label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa email"
@@ -62,7 +75,6 @@
                             <div class="invalid-feedback">Por favor ingresa un email válido.</div>
                         </div>
 
-                        <!-- Password -->
                         <div class="mb-3">
                             <label for="pwd" class="form-label">Contraseña:</label>
                             <input type="password" class="form-control" id="pwd" name="pswd"
@@ -73,7 +85,6 @@
                             </div>
                         </div>
 
-                        <!-- Confirmar Password -->
                         <div class="mb-3">
                             <label for="confirmPwd" class="form-label">Confirmar Contraseña:</label>
                             <input type="password" class="form-control" id="confirmPwd" name="confirmPwd"
@@ -81,7 +92,6 @@
                             <div class="invalid-feedback">Las contraseñas no coinciden.</div>
                         </div>
 
-                        <!-- Botón -->
                         <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Enviar</button>
                     </form>
                 </div>
@@ -95,6 +105,7 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+    <script src="js/ejercicio01.js"></script>
     <script src="js/ejercicio03.js"></script>
 </body>
 

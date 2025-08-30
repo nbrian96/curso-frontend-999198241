@@ -8,3 +8,9 @@ body {
 #navbar {
     background-color: #020336;
 }
+
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    scroll-margin-top: 70px;
+}
