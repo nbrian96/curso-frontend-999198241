@@ -14,3 +14,14 @@ section {
     padding-bottom: 5rem;
     scroll-margin-top: 70px;
 }
+
+.list-group-item {
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.list-group-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
