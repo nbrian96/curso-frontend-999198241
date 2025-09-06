@@ -2,23 +2,20 @@ if (!localStorage.getItem("arrayTareas")) {
     localStorage.setItem("arrayTareas", JSON.stringify([]));
 }
 
-function obtenerArray(name) {
-    return JSON.parse(localStorage.getItem(name));
-}
-
-function crearRow(text) {
+function crearRowEj4(text, index) {
     const li = document.createElement("li");
     li.classList.add("list-group-item");
     li.textContent = text;
+    li.style.transitionDelay = `${index * 0.2}s`; 
     return li;
 }
 
-function renderLista(arr) {
+function renderListaEj4(arr) {
   const lista = document.getElementById("listEj04");
   lista.innerHTML = "";
 
-  arr.forEach((item) => {
-    const li = crearRow(item.name);
+  arr.forEach((item, index) => {
+    const li = crearRowEj4(item.name, index);
     lista.appendChild(li);
 
     requestAnimationFrame(() => {
@@ -33,9 +30,9 @@ document.getElementById("searchEj04").addEventListener("input", (e) => {
   const arr = obtenerArray("arrayTareas");
   const arrFilter = arr.filter(item => item.name.trim().toLowerCase().includes(text));
 
-  return text === "" ? renderLista(arr) : renderLista(arrFilter);
+  return text === "" ? renderListaEj4(arr) : renderListaEj4(arrFilter);
 });
 
 
 const arr = obtenerArray("arrayTareas");
-renderLista(arr);
+renderListaEj4(arr);

@@ -149,6 +149,15 @@ function pendienteItem(index) {
     renderLista("arrayTareas");
 }
 
+function analizarInput() {
+    const input = document.getElementById("tarea");
+    const valor = input.value.trim();
+    if (valor !== "") {
+        agregarItem(valor);
+        input.value = "";
+    }
+}
+
 document.getElementById("filterAll").addEventListener("click", function () {
     const arr = obtenerArray("arrayTareas");
     guardarArray(arr, "arrayTareas");
@@ -170,11 +179,12 @@ document.getElementById("filterPending").addEventListener("click", function () {
 });
 
 document.getElementById("btnTarea").addEventListener("click", () => {
-    const input = document.getElementById("tarea");
-    const valor = input.value.trim();
-    if (valor !== "") {
-        agregarItem(valor);
-        input.value = "";
+    analizarInput();
+});
+
+document.getElementById("tarea").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        analizarInput();
     }
 });
 
