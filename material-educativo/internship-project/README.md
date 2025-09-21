@@ -20,6 +20,22 @@ Crea un formulario de contacto con campos `name`, `email`, `message`:
 - Validaciones con expresiones regulares y atributos HTML5.
 - Tipado estricto de eventos y estado.
 
+**Estructura sugerida:**
+
+```
+src/
+├── App.jsx
+├── components/
+│   ├── Tarea.jsx
+│   ├── ListaTareas.jsx
+│   ├── FormularioTarea.jsx
+│   ├── Filtros.jsx
+│   └── Estadisticas.jsx
+├── hooks/
+│   └── useLocalStorage.js
+└── App.css
+```
+
 ---
 
 ## 📚 Recursos Adicionales
