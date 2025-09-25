@@ -1,5 +1,7 @@
-import reactLogo from '@/assets/react.svg'
-import viteLogo from '/vite.svg'
+import reactLogo from '@/assets/react.svg';
+import viteLogo from '/vite.svg';
+
+import Title from '@/components/ui/Title';
 
 function Home() {
   return (
@@ -12,12 +14,12 @@ function Home() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React + TypeScript</h1>
+      <Title>Vite + React + TypeScript</Title>
       <p>
         Una aplicación moderna con navbar responsive y componentes escalables
       </p>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+dist/
+build/
+
+# Archivos de configuración
+*.config.js
+*.config.ts
+vite.config.ts
+tsconfig*.json
+
+# Archivos generados
+*.d.ts
+coverage/
+
+# Archivos temporales
+.temp/
+.cache/
+
+# Archivos de documentación
+*.md

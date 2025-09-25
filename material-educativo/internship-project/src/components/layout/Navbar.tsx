@@ -1,14 +1,14 @@
-import { Link, useLocation } from 'react-router-dom'
-import './Navbar.css'
+import { Link, useLocation } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
-  const location = useLocation()
+  const location = useLocation();
 
   const navItems = [
     { path: '/', label: 'Inicio' },
-    { path: '/contact', label: 'Contacto' },
-    { path: '/class21', label: 'Clase 21' }
-  ]
+    { path: '/class21', label: 'Clase 21' },
+    { path: '/class22', label: 'Clase 22' }
+  ];
 
   return (
     <nav className="navbar">
@@ -16,14 +16,13 @@ const Navbar = () => {
         <Link to="/" className="navbar-brand">
           Mi Proyecto
         </Link>
-        
+
         <ul className="navbar-menu">
           {navItems.map((item) => (
             <li key={item.path} className="navbar-item">
               <Link
                 to={item.path}
-                className={`navbar-link ${
-                  location.pathname === item.path ? 'active' : ''
+                className={`navbar-link ${location.pathname === item.path ? 'active' : ''
                 }`}
               >
                 {item.label}
@@ -33,7 +32,7 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

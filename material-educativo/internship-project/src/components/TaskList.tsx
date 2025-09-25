@@ -1,21 +1,21 @@
-import { useState, useEffect } from 'react'
-import type { TaskList as TaskListType } from '@/types/TaskList'
+import { useEffect, useState } from 'react';
+import type { TaskListProps } from '@/types/TaskList';
 
-import Button from '@/components/ui/Button'
+import Button from '@/components/ui/Button';
 
-interface TaskListProps {
-  taskList: TaskListType
+interface TaskListComponentProps {
+  taskList: TaskListProps
 }
 
-function TaskList({ taskList }: TaskListProps) {
-  const { tasks, removeTask, toggleTask } = taskList
+function TaskList({ taskList }: TaskListComponentProps) {
+  const { tasks, removeTask, toggleTask } = taskList;
 
-  const [totalTasks, setTotalTasks] = useState(tasks.length)
-  const [totalCompletedTasks, setTotalCompletedTasks] = useState(tasks.filter((task) => task.completed).length)
+  const [totalTasks, setTotalTasks] = useState(tasks.length);
+  const [totalCompletedTasks, setTotalCompletedTasks] = useState(tasks.filter((task) => task.completed).length);
 
   useEffect(() => {
-    setTotalTasks(tasks.length)
-    setTotalCompletedTasks(tasks.filter((task) => task.completed).length)
+    setTotalTasks(tasks.length);
+    setTotalCompletedTasks(tasks.filter((task) => task.completed).length);
   }, [tasks]);
 
   return (
@@ -52,7 +52,7 @@ function TaskList({ taskList }: TaskListProps) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default TaskList
+export default TaskList;

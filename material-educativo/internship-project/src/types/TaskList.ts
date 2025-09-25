@@ -1,7 +1,7 @@
-import type { Task } from './Task'
+import type { TaskProps } from './Task';
 
-export interface TaskList {
-  tasks: Task[]
+export interface TaskListProps {
+  tasks: TaskProps[]
   addTask: (title: string) => void
   removeTask: (id: number) => void
   toggleTask: (id: number) => void
